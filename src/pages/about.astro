@@ -1,152 +1,62 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
 ---
 
-<Layout title="The Data Decorator: About">
-  <main>
-    <div class="main">
-      <section class="section-header">
-        <h1>Making your data, work for you.</h1>
-        <p>
-          Certified Power BI expert with over 5 years of Power BI, DAX & data
-          experience.
-        </p>
-      </section>
-    </div>
-    <a id="about"></a>
-    <div class="main1">
-      <section class="section-desc">
-        <div class="desc3">
-          <h2>
-            The Data Decorator is a Power BI Consultancy based in Leeds, UK
-          </h2>
-          <p>
-            Founded in 2022 after working professionally with Power BI for over
-            5 years.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
-            deserunt aut esse rem earum error placeat sapiente amet vero
-            voluptatum. Nesciunt, beatae mollitia quae veniam velit esse ut
-            delectus dolores.
-          </p>
-          <p>2</p>
-          <p>1</p>
-          <p>2</p>
-        </div>
-      </section>
-    </div>
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">About</Fragment>
+      <Fragment slot="desc">We are a small passionate team.</Fragment>
+    </Sectionhead>
 
-    <div class="main">
-      <section class="section_title">
-        <a id="projects"></a>
-        <a href="/projects"
-          ><h2 id="section_title">
-            Projects <i id="section_title_i">&#8594;</i>
-          </h2>
-        </a>
-      </section>
-      <section class="section-projects">
-        <div class="project">
-          <div class="project-img">
-            <a
-              href="https://app.powerbi.com/view?r=eyJrIjoiMzdjMjBhZmUtMDlkOC00MzllLWEzNmEtNjk5ODQ5ZmYwNDEzIiwidCI6ImM5YjIyYTk1LTE1MzUtNGFlNC1iY2QzLTcyZjE5NzUxYzI3MiJ9"
-              target="_blank"
-              ><img
-                src="../assets/worldmap.webp"
-                alt="Filled Map shwing various country statistics"
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Empowering the world with Astro.
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        We're a multi-cultural team from around the world! We come from diverse
+        backgrounds, bringing different personalities, experiences and skills to
+        the job. This is what makes our team so special.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        publishedTeamMembers.map((teamMemberEntry) => (
+          <div class="group">
+            <div class="w-full aspect-square">
+              <Picture
+                src={teamMemberEntry.data.avatar.src}
+                alt={teamMemberEntry.data.avatar.alt}
+                sizes="(max-width: 800px) 100vw, 400px"
+                widths={[200, 400]}
+                aspectRatio="1:1"
+                background="#ffffff"
+                fit="cover"
+                position="center"
+                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
               />
-            </a>
-          </div>
-          <div class="project-title">
-            <a href="#!"
-              ><h2 id="project_title_1">
-                Global Statistics Programme
-                <i id="project_title_1_i">&#8594;</i>
+            </div>
+
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800">
+                {teamMemberEntry.data.name}
               </h2>
-            </a>
+              <h3 class="text-sm text-slate-500">
+                {teamMemberEntry.data.title}
+              </h3>
+            </div>
           </div>
-          <div class="project-desc">
-            <p>Map showing various statistics by country.</p>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project-img">
-            <a
-              href="https://app.powerbi.com/view?r=eyJrIjoiMzQ3YWY4MWQtZjEwNS00OGZhLWE3NzEtNzZmM2ViN2ViNWI0IiwidCI6IjUwZjYwNzFmLWJiZmUtNDAxYS04ODAzLTY3Mzc0OGU2MjllMiIsImMiOjh9&pageName=ReportSection3ed77151186ecd679338"
-              target="_blank"
-              ><img
-                src="../assets/nhsd.webp"
-                alt="NHS digital Maternity Service Dashboard Screenshot"
-              />
-            </a>
-          </div>
-          <div class="project-title">
-            <a href="#!"
-              ><h2 id="project_title_2">
-                NHS Digital <i id="project_title_2_i">&#8594;</i>
-              </h2>
-            </a>
-          </div>
-          <div class="project-desc">
-            <p>Design and build of the National Maternity Services Dashboard</p>
-          </div>
-        </div>
-      </section>
+        ))
+      }
     </div>
-    <a id="articles"></a>
-    <div class="main2">
-      <section class="section-desc">
-        <div class="desc1">
-          <h2>A co-founder at one of the world's largest communities.</h2>
-          <p>
-            The combined experience I have working at the top Fortune 500
-            companies has allowed me to developer a skillset that helps me in
-            not just development, but in every aspect of any business.
-          </p>
-          <p>
-            I'm proud to announce that I am now working at one of the world's
-            largest communities teaching young minds about how to sell yourself
-            as a developer and open them to a whole new world of opportunities.
-          </p>
-        </div>
-        <div class="desc2">
-          <p>
-            As a developer, you have everything available to you and all that's
-            holding you back is yourself.
-          </p>
-          <p>A quote I live by perfectly illustrates what I mean.</p>
-          <p>
-            "How big would you dream, if you knew you wouldn't fail?" You've
-            already gone through the hardest parts being a developer, it's time
-            to elevate your skills and become a leader in something you're
-            passionate about.
-          </p>
-          <p>
-            I'm happy to chat over coffee some time about how I can help your
-            company.
-          </p>
-        </div>
-      </section>
-    </div>
-    <div class="main">
-      <section class="section-work">
-        <div class="work1">
-          <h2>Interested in working with us?</h2>
-          <p>
-            We're active on all social media platforms listed below, but you can
-            also send us an email and we will get back to you within 24-48
-            hours.
-          </p>
-          <div class="contact">
-            <a href="mailto:marc@thedatadecorator.com?subject=Decorate My Data!"
-              >Get in touch</a
-            >
-            <a href="slack://user?team=T046HRXGB5Z&id=U0477KGCCCQ">Slack Me</a>
-          </div>
-        </div>
-      </section>
-    </div>
-  </main>
+  </Container>
 </Layout>
