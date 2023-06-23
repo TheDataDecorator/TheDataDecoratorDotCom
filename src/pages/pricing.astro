@@ -6,8 +6,8 @@ import Pricing from "@components/pricing.astro";
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
+    name: "Charities",
+    price: "From Free",
     popular: false,
     features: [
       "Lifetime free",
@@ -23,7 +23,7 @@ const pricing = [
     },
   },
   {
-    name: "Startup",
+    name: "Starter Package",
     price: {
       monthly: "$19",
       annual: "$16",
@@ -45,7 +45,24 @@ const pricing = [
     },
   },
   {
-    name: "Enterprise",
+    name: "SME Package",
+    price: "Custom",
+    popular: false,
+    features: [
+      "All Pro Features",
+      "Unlimited Custom domains",
+      "99.99% Uptime SLA",
+      "SAML & SSO Integration",
+      "Dedicated Account Manager",
+      "24/7 Phone Support",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Enterprise Package",
     price: "Custom",
     popular: false,
     features: [
