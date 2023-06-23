@@ -1,68 +1,63 @@
 ---
-import { SEO } from "astro-seo";
-import Footer from "@components/footer.astro";
-import Navbar from "@components/navbar/navbar.astro";
-import "@fontsource/inter/variable.css";
-
 export interface Props {
   title: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
-
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site
-).toString();
-
+import Footer from "../layouts/Footer.astro";
+import Nav from "../layouts/Nav.astro";
 const { title } = Astro.props;
-
-const makeTitle = title
-  ? title + " | " + "The Data Decorator"
-  : "The Data Decorator - Power BI Consultancy";
+import "../styles/style.css";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2709431577412302"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVZLCBV5BP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-WVZLCBV5BP");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="The Data Decorator: certified Power BI experts, here to help your business make the most of its data."
+    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-
-    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
-    <SEO
-      title={makeTitle}
-      description="The Data Decorator is a Power BI & data consultancy based in Leeds, UK"
-      canonical={canonicalURL}
-      twitter={{
-        creator: "@iammarcmason",
-        site: "www.thedatadecorator.com",
-        card: "summary_large_image",
-      }}
-      openGraph={{
-        basic: {
-          url: canonicalURL,
-          type: "website",
-          title: `The Data Decorator - Power BI Consultancy`,
-          image: resolvedImageWithDomain,
-        },
-        image: {
-          alt: "The Data Decorator - Homepage Screenshot",
-        },
-      }}
+    <script src="../js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500&family=Pacifico&display=swap"
+      as="font"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+
+    <title>{title}</title>
   </head>
   <body>
-    <Navbar />
+    <script is:inline>
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+    <Nav />
     <slot />
     <Footer />
-    <style is:global>
-      /* Improve Page speed */
-      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
-      img {
-        content-visibility: auto;
-      }
-    </style>
   </body>
 </html>
