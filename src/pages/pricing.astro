@@ -8,53 +8,11 @@ const pricing = [
   {
     name: "Charities",
     price: "From Free",
+    
+    perfectfor:"Non-Profits",
     popular: false,
     features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "/",
-    },
-  },
-  {
-    name: "Starter Package",
-    price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
-    },
-    popular: true,
-    features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "#",
-    },
-  },
-  {
-    name: "SME Package",
-    price: "Custom",
-    popular: false,
-    features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
+      "Contact us to discuss your needs",
     ],
     button: {
       text: "Contact us",
@@ -62,16 +20,70 @@ const pricing = [
     },
   },
   {
-    name: "Enterprise Package",
-    price: "Custom",
+    name: "6 Week Package",
+    price: {
+      monthly: "£12,750",
+      annual: "$16",
+      discount: "10%",
+      original: "£15,000",
+    },
+    popular: false,
+    perfectfor:"Smaller Projects",
+    features: [
+      "Report Writing",
+      "Requirements Gathering",
+      "Staff Training",
+      "Get in touch to discuss your needs"
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+  {
+    name: "12 Week Package",
+    price: {
+      monthly: "£25,000",
+      annual: "$16",
+      discount: "10%",
+      original: "£30,000",
+    },
+    popular: true,
+    perfectfor:"More Complex Projects",
+    features: [
+      "All 6 week package features",
+      "Custom Connections",
+      "End User Training",
+    ],
+    button: {
+      text: "Get Started",
+      link: "#",
+    },
+  },
+  {
+    name: "Daily Package",
+    perfectfor:"On-going Projects or those without an end date",
+    price: {
+      monthly: "£475 P/D",
+      annual: "$16",
+      discount: "10%",
+      original: "£500 P/D",
+    },
     popular: false,
     features: [
       "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+  {
+    name: "Custom Package",
+    price: "Contact Us",
+    popular: false,
+    features: [
+      "Negotiable rates on longer term projects",
     ],
     button: {
       text: "Contact us",
