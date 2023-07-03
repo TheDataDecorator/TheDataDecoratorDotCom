@@ -16,3 +16,4 @@ Here I will give an example and some sample code that you can possibly use the n
 
 The API I will be using is the SharpSpring CRM API but the logic can apply to most API's.
 
+Essentialy, we construct a function and a query, within the query we use the function to call the API, then increment a variable by some amount, cache the results and repeat, incrementing the variable and appending the results each time until there are no more results, or if you decide to limit the number of results, your limit is reached.
