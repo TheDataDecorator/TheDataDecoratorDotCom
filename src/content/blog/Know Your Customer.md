@@ -3,7 +3,7 @@ draft: false
 title: "How implementing a \"Know Your Customer\" approach can help you make better reports."
 snippet: "In banking there is the concept of \"Know Your Customer\", in this article we look at how adopting that approach can save you time and make your report consumers happier."
 image: {
-    src: "../assets/customer.jpg",
+    src: "../../assets/customer.jpg",
     alt: "Know Your Customer"
 }
 publishDate: "2023-07-03 11:39"
