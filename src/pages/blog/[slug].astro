@@ -46,9 +46,10 @@ const { Content } = await entry.render();
           }
         </div>
       </div>
+      {entry.data.snippet}
     </div>
 
-    <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+    <div class="mx-auto prose prose-md mt-6 max-w-3xl">
       <Content />
     </div>
     <div class="text-center mt-8">
