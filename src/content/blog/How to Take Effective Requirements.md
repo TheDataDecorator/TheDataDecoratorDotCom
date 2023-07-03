@@ -3,7 +3,7 @@ draft: false
 title: "How To Take Effective Requirements."
 snippet: "Requirements gathering is as much an art as it is a skill."
 image: {
-    src: "/../assets/requirements.jpg",
+    src: "../../assets/requirements.jpg",
     alt: "Requirements Gathering"
 }
 publishDate: "2023-07-03 11:39"
