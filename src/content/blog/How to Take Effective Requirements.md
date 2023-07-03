@@ -43,7 +43,7 @@ A good approach to gathering requirements will always include a discussion with 
     * **Performance** — Product or system needs to perform correctly to achieve customer’s goals
     * **Accessibility** — Customer should be able to access product or service by multiple channels.
 
-Communicate & Collaborate
-Prioritise Requirements
-Manage the requirements change effectively
-Work closely with your stakeholders to validate the requirements captured
+* **Communicate & Collaborate**
+* **Prioritise Requirements**
+* **Manage the requirements change effectively**
+* **Work closely with your stakeholders to validate the requirements captured**
