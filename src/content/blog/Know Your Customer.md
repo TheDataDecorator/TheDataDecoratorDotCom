@@ -1,7 +1,7 @@
 ---
-draft: true
-title: "How to become a Frontend Master"
-snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
+draft: false
+title: "How implementing a ""Know Your Customer "" approach can help you make better reports."
+snippet: "In banking their is the concept of ""Know Your Customer"", in this article we look at how adopting that approach can save you time and make your report consumers happier."
 image: {
     src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
     alt: "frontend master"
