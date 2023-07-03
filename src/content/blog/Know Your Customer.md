@@ -6,8 +6,8 @@ image: {
     src: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?&fit=crop&w=430&h=240",
     alt: "frontend master"
 }
-publishDate: "2022-11-07 15:39"
-category: "Tutorials"
-author: "Connor Lopez"
+publishDate: "2023-07-03 11:39"
+category: "Development"
+author: "Marc Mason"
 tags: [astro, tailwindcss, frontend]
 ---
