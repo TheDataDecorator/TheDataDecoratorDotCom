@@ -3,7 +3,7 @@ draft: false
 title: "Calling an API recursiveley with PowerQuery"
 snippet: "You've found a great API, but it has a record limit, what next...!"
 image: {
-    src: "../../assets/API_Calling.jpg",
+    src: "/assets/API_Calling.jpg",
     alt: "API"
 }
 publishDate: "2023-07-03 11:39"
