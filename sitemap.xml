@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://thedatadecorator.com/</loc>
+  <lastmod>2025-11-03T16:49:23+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://thedatadecorator.com/pricing/</loc>
+  <lastmod>2025-11-03T16:49:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thedatadecorator.com/about/</loc>
+  <lastmod>2025-11-03T16:49:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thedatadecorator.com/blog/</loc>
+  <lastmod>2025-11-03T16:49:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thedatadecorator.com/contact/</loc>
+  <lastmod>2025-11-03T16:49:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thedatadecorator.com/blog/grab-excel-file-contents-from-sharepoint-without-using-the-sharepoint-connector/</loc>
+  <lastmod>2025-11-03T16:49:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thedatadecorator.com/blog/call-an-api-recursively-with-powerquery/</loc>
+  <lastmod>2025-11-03T16:49:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thedatadecorator.com/blog/how-to-take-effective-requirements/</loc>
+  <lastmod>2025-11-03T16:49:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thedatadecorator.com/blog/know-your-customer/</loc>
+  <lastmod>2025-11-03T16:49:23+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
